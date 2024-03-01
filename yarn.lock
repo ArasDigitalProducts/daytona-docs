@@ -76,10 +76,10 @@
     unist-util-visit "^5.0.0"
     vfile "^6.0.1"
 
-"@astrojs/node@8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/node/-/node-8.2.1.tgz#b14ee47abe70a2dc6535e9be5723d57392031c6e"
-  integrity sha512-n3VWx34V5te6g/Jm2rbpXzTdpCW86CmstaGbsPutOs6VaXvvWwk+ZibA/bFl7XgNpxqQ5d6Pqacnsn+xkZ/Kag==
+"@astrojs/node@8.2.3":
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/node/-/node-8.2.3.tgz#1fd0e78520a897941ea42e51b7e8b5542f238aba"
+  integrity sha512-VQQy7QIv4X+5dlKCEchYIxMFryS+BwDOFGNzeRmHe1/P819TlNup9/M8XqnWW4aZPxV7P6CoDeFxX6HuT/kOmQ==
   dependencies:
     send "^0.18.0"
     server-destroy "^1.0.1"
@@ -150,10 +150,10 @@
     is-wsl "^3.0.0"
     which-pm-runs "^1.1.0"
 
-"@astropub/md@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@astropub/md/-/md-0.3.0.tgz#a795295cb6c278da306c8b0cae190600f93fc382"
-  integrity sha512-cR4gT97/aI9GH26Hg4g5tZZl5MFeEH26RO54irjiTK7FEmILbGViHAXI+q+7VCghi1bEGsy5SpY3u1hRoAFNfQ==
+"@astropub/md@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@astropub/md/-/md-0.4.0.tgz#2f0928836a61159b5429962130991b3575eb9f50"
+  integrity sha512-f0kJIfywRKLcVqlizqUPModBBuJ7WwBEIWJEt1Eq/ksSYixtOl8HQWMZKJhv9Xtc9OKHhkQf0AQc56EV1xNUnw==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.5":
   version "7.23.5"
@@ -1192,10 +1192,10 @@ astro-expressive-code@^0.33.4:
     hast-util-to-html "^8.0.4"
     remark-expressive-code "^0.33.4"
 
-astro@4.4.6:
-  version "4.4.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-4.4.6.tgz#de1cafdc9935c855dbfad8a799d4364d268df9aa"
-  integrity sha512-kns2TtiMYTyDPgcvtaQjMfBhY/F/2+O3eSX4XWH13FFQW1hp7AcTXfGwq8SvJ14JNoU4bsKeJbaB9CxUN9ZQlQ==
+astro@4.4.8:
+  version "4.4.8"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.4.8.tgz#7729fcf7b9776db703d91fb5253f34c12d298cd7"
+  integrity sha512-jAAfzvgHOfuZmqJjnSDownVNuWKYmsGkrFqecEppHarMA/cZ5QIboW6GQHZ8eGZQdtYRCjON3h4i64XFZfuwSg==
   dependencies:
     "@astrojs/compiler" "^2.5.3"
     "@astrojs/internal-helpers" "0.2.1"
@@ -1256,7 +1256,7 @@ astro@4.4.6:
     tsconfck "^3.0.0"
     unist-util-visit "^5.0.0"
     vfile "^6.0.1"
-    vite "^5.1.2"
+    vite "^5.1.4"
     vitefu "^0.2.5"
     which-pm "^2.1.1"
     yargs-parser "^21.1.1"
@@ -1345,13 +1345,13 @@ bl@^5.0.0:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-body-parser@1.20.1:
-  version "1.20.1"
-  resolved "https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz"
-  integrity sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==
+body-parser@1.20.2:
+  version "1.20.2"
+  resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.2.tgz#6feb0e21c4724d06de7ff38da36dad4f57a747fd"
+  integrity sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==
   dependencies:
     bytes "3.1.2"
-    content-type "~1.0.4"
+    content-type "~1.0.5"
     debug "2.6.9"
     depd "2.0.0"
     destroy "1.2.0"
@@ -1359,7 +1359,7 @@ body-parser@1.20.1:
     iconv-lite "0.4.24"
     on-finished "2.4.1"
     qs "6.11.0"
-    raw-body "2.5.1"
+    raw-body "2.5.2"
     type-is "~1.6.18"
     unpipe "1.0.0"
 
@@ -1643,7 +1643,7 @@ content-disposition@0.5.4:
   dependencies:
     safe-buffer "5.2.1"
 
-content-type@~1.0.4:
+content-type@~1.0.4, content-type@~1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz"
   integrity sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==
@@ -2017,14 +2017,14 @@ expand-template@^2.0.3:
   resolved "https://registry.yarnpkg.com/expand-template/-/expand-template-2.0.3.tgz#6e14b3fcee0f3a6340ecb57d2e8918692052a47c"
   integrity sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==
 
-express@^4.18.2:
-  version "4.18.2"
-  resolved "https://registry.npmjs.org/express/-/express-4.18.2.tgz"
-  integrity sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==
+express@^4.18.3:
+  version "4.18.3"
+  resolved "https://registry.yarnpkg.com/express/-/express-4.18.3.tgz#6870746f3ff904dee1819b82e4b51509afffb0d4"
+  integrity sha512-6VyCijWQ+9O7WuVMTRBTl+cjNNIzD5cY5mQ1WM8r/LEkI2u8EYpOotESNwzNlyCn3g+dmjKYI6BmNneSr/FSRw==
   dependencies:
     accepts "~1.3.8"
     array-flatten "1.1.1"
-    body-parser "1.20.1"
+    body-parser "1.20.2"
     content-disposition "0.5.4"
     content-type "~1.0.4"
     cookie "0.5.0"
@@ -2869,15 +2869,15 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-kleur@4.1.5, kleur@^4.1.4:
-  version "4.1.5"
-  resolved "https://registry.npmjs.org/kleur/-/kleur-4.1.5.tgz"
-  integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
-
 kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
+
+kleur@^4.1.4:
+  version "4.1.5"
+  resolved "https://registry.npmjs.org/kleur/-/kleur-4.1.5.tgz"
+  integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
 
 leven@^3.1.0:
   version "3.1.0"
@@ -4165,10 +4165,10 @@ range-parser@~1.2.1:
   resolved "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-raw-body@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.npmjs.org/raw-body/-/raw-body-2.5.1.tgz"
-  integrity sha512-qqJBtEyVgS0ZmPGdCFPWJ3FreoqvG4MVQln/kCgF7Olq95IbOp0/BWyMwbdtn4VTvkM8Y7khCQ2Xgk/tcrCXig==
+raw-body@2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.5.2.tgz#99febd83b90e08975087e8f1f9419a149366b68a"
+  integrity sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==
   dependencies:
     bytes "3.1.2"
     http-errors "2.0.0"
@@ -4647,15 +4647,14 @@ sprintf-js@~1.0.2:
   resolved "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
   integrity sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==
 
-starlight-openapi@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/starlight-openapi/-/starlight-openapi-0.4.0.tgz#11b5868b6c7afabf3a18eb62409398f1c494f73d"
-  integrity sha512-ycxTJ1pA3H+WPePtCC22ESMH8x6gnf9nLOIfQjVqCbnspA388yW62f2XzvVw9PRIDz+ielyunWZE/LOYxojfig==
+starlight-openapi@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/starlight-openapi/-/starlight-openapi-0.5.0.tgz#8191b9787b9da3e1c23c4c8f127bea863ef06038"
+  integrity sha512-7oOxCH09SaNJay+vzAL0ssVUKcjh2t4P5TZnZ5UOmndm9pd4fh9Li1qZL5UX3Xq0Js2NruTGh1qeK7Qb+I+NSQ==
   dependencies:
-    "@astropub/md" "0.3.0"
+    "@astropub/md" "0.4.0"
     "@readme/openapi-parser" "2.5.0"
     github-slugger "2.0.0"
-    kleur "4.1.5"
 
 statuses@2.0.1:
   version "2.0.1"
@@ -5202,7 +5201,7 @@ vite-plugin-svgr@^4.2.0:
     "@svgr/core" "^8.1.0"
     "@svgr/plugin-jsx" "^8.1.0"
 
-vite@^5.1.2, vite@^5.1.4:
+vite@^5.1.4:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/vite/-/vite-5.1.4.tgz#14e9d3e7a6e488f36284ef13cebe149f060bcfb6"
   integrity sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==
