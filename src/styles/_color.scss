@@ -1,4 +1,4 @@
-body {
+:root {
   --white: #fff;
   --bg-color: #0a0a0a;
   --primary-text-color: #fff;
@@ -25,7 +25,7 @@ body {
   --blue-link: #59acff;
 }
 
-body.light {
+:root[data-theme='light'] {
   --bg-color: #fff;
   --border-color: #dedede;
   --border-extra: #dedede;
