@@ -3,6 +3,7 @@ import { loadEnv } from 'vite'
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import node from '@astrojs/node'
+import react from '@astrojs/react'
 import { ExpressiveCodeTheme } from '@astrojs/starlight/expressive-code';
 
 const { PUBLIC_WEB_URL } = loadEnv(import.meta.env.MODE, process.cwd(), '')
@@ -15,25 +16,37 @@ const myThemeLight = ExpressiveCodeTheme.fromJSONString(jsonLightString);
 // https://astro.build/config
 export default defineConfig({
   site: PUBLIC_WEB_URL,
-  integrations: [starlight({
+  integrations: [
+    react(),
+    starlight({
     favicon: '/favicon.ico',
     title: 'Daytona',
     social: {
       github: 'https://github.com/daytonaio/daytona'
     },
-    "sidebar": [{
-      "label": "Getting Started",
-      link: 'getting-started',
-      attrs: {
-        icon: 'flag.svg'
-      },
-    }, {
-      "label": "Architecture",
-      link: 'architecture',
-      attrs: {
-        icon: 'layers.svg'
-      },
-    }, {
+    "sidebar": [
+      // {
+      // "label": "Getting Started",
+      // link: 'getting-started',
+      // attrs: {
+      //   icon: 'flag.svg'
+      // },
+      // }, 
+      // {
+      // "label": "Architecture",
+      // link: 'architecture',
+      // attrs: {
+      //   icon: 'layers.svg'
+      // },
+      // }, 
+      {
+        "label": "Getting Started",
+        link: '/',
+        attrs: {
+          icon: 'flag.svg'
+        },
+      }, 
+      {
       "label": "Installation",
       "items": [{
         "label": "Single Node",
@@ -121,10 +134,10 @@ export default defineConfig({
       // }
       ]
     },
-        {
-      "label": "Administration",
-      "items": [
-          // {
+    //     {
+    //   "label": "Administration",
+    //   "items": [
+    //       {
     //     "label": "Application Logs",
     //     "link": "/administration/application-logs/",
     //     attrs: {
@@ -149,23 +162,25 @@ export default defineConfig({
     //       icon: 'pulse.svg'
     //     },
     //   },
-          {
-        "label": "Appearance",
-        "link": "/administration/appearance/",
-        attrs: {
-          icon: 'union.svg'
-        },
-      }]
-    },
+    //       {
+    //     "label": "Appearance",
+    //     "link": "/administration/appearance/",
+    //     attrs: {
+    //       icon: 'union.svg'
+    //     },
+    //   }]
+    // },
         {
       "label": "Tools and Resources",
-      "items": [{
-        "label": "API",
-        "link": "/tools/api/",
-        attrs: {
-          icon: 'switch.svg'
-        },
-      }, {
+      "items": [
+      //   {
+      //   "label": "API",
+      //   "link": "/tools/api/",
+      //   attrs: {
+      //     icon: 'switch.svg'
+      //   },
+      // }, 
+      {
         "label": "CLI",
         "link": "/tools/cli/",
         attrs: {
@@ -210,17 +225,16 @@ export default defineConfig({
       PageTitle: './src/components/PageTitle.astro',
       Hero: './src/components/Hero.astro',
       ThemeProvider: './src/components/ThemeProvider.astro',
-      ThemeSelect: './src/components/ThemeSelect.astro'
+      ThemeSelect: './src/components/ThemeSelect.astro',
+      Head: './src/components/Head.astro',
     },
     expressiveCode: {
       themes: [myThemeDark, myThemeLight],
-    }
+    },
   })],
   output: 'hybrid',
   adapter: node({
     mode: 'middleware',
-
-
   }),
   vite: {
     ssr: {
