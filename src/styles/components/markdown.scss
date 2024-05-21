@@ -320,7 +320,7 @@
     cursor: pointer;
     pointer-events:all;
     padding:0.6rem 0;
-    color:#fff;
+    color: var(--primary-text-color);
     margin:1.4rem 0;
     border-top: 1px solid #2ecc71;
     border-bottom: 1px solid #2ecc71;
@@ -354,12 +354,16 @@
   .container td, th {
     padding: 6px 16px;
     text-align: center;
-    color:#fff;
+    color: var(--primary-text-color);
   }
 
 
   .table-color tr:nth-child(even) {
     background-color: #161616;
+
+    > td {
+      color: #fff;
+    }
   }
 
   .table-color tr > td:nth-child(1) {
