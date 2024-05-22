@@ -359,11 +359,7 @@
 
 
   .table-color tr:nth-child(even) {
-    background-color: #161616;
-
-    > td {
-      color: var(--white);
-    }
+    background-color: var(--cta-surface-neutral-primary);
   }
 
   .table-color tr > td:nth-child(1) {
