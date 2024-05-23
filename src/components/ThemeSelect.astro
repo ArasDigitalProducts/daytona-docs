@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import darkThemeIcon from '@assets/icons/dark-moon.svg?raw'
 import defaultThemeIcon from '@assets/icons/default-mood.svg?raw'
 import lightThemeIcon from '@assets/icons/light-sun.svg?raw'
@@ -20,7 +21,7 @@ import lightThemeIcon from '@assets/icons/light-sun.svg?raw'
     </button>
     <button
             type="button"
-            id="system"
+            id="auto"
             aria-label="default theme"
     >
         <Fragment set:html={defaultThemeIcon} />
@@ -32,7 +33,7 @@ import lightThemeIcon from '@assets/icons/light-sun.svg?raw'
 </script>
 
 <script>
-    type Theme = 'system' | 'dark' | 'light';
+    type Theme = 'auto' | 'dark' | 'light';
 
     class ThemeSelect extends HTMLElement {
         #key = 'theme';
@@ -48,27 +49,49 @@ import lightThemeIcon from '@assets/icons/light-sun.svg?raw'
                 });
             });
         }
+
+        /** Get a typesafe theme string from any JS value (unknown values are coerced to `'auto'`). */
         #parseTheme(theme: unknown): Theme {
-            if (theme === 'dark' || theme === 'light'|| theme==='system') {
+            if (theme === 'auto' || theme === 'dark' || theme === 'light') {
                 return theme;
             } else {
-                return 'dark';
+                return 'auto';
             }
         }
+
+        /** Get the preferred system color scheme. */
         #getPreferredColorScheme(): Theme {
             return matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
+
+        /** Update select menu UI, document theme, and local storage state. */
         #onThemeChange(theme: Theme): void {
             ThemeProvider.updatePickers(theme);
+            const themeFinal = theme === 'auto' ? this.#getPreferredColorScheme() : theme;
+            if (themeFinal === 'light') {
+                document.body.classList.add('light')
+                document.body.classList.remove('dark')
+            } else {
+                document.body.classList.add('dark')
+                document.body.classList.remove('light')
+            }
             document.documentElement.dataset.theme =
-              theme === 'system' ? this.#getPreferredColorScheme() : theme;
+                theme === 'auto' ? this.#getPreferredColorScheme() : theme;
             this.#storeTheme(theme);
         }
 
+        /** Store the user’s preference in `localStorage`. */
         #storeTheme(theme: Theme): void {
-            localStorage.setItem(this.#key, theme);
+            if (typeof localStorage !== 'undefined') {
+                if (theme === 'light' || theme === 'dark') {
+                    localStorage.setItem(this.#key, theme);
+                } else {
+                    localStorage.removeItem(this.#key);
+                }
+            }
         }
 
+        /** Load the user’s preference from `localStorage`. */
         #loadTheme(): Theme {
             const theme = typeof localStorage !== 'undefined' && localStorage.getItem(this.#key);
             return this.#parseTheme(theme);
